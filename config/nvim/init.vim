@@ -73,7 +73,7 @@ highlight Type cterm=italic
 highlight Normal ctermbg=none
 
 set number                  " show line numbers
-" set relativenumber          " show relative line numbers
+set relativenumber          " show relative line numbers
 
 set wrap                    " turn on line wrapping
 set wrapmargin=8            " wrap lines when coming within n characters from side
@@ -153,16 +153,20 @@ endif
 " Section Mappings {{{
 
 " set a map leader for more key combos
-let mapleader = ','
+let mapleader = '\'
 
 " remap esc
-inoremap jk <esc>
+inoremap jj <esc>
+
+" map fj and fk to page up/down
+nmap fj <c-f>
+nmap fk <c-b>
 
 " wipout buffer
 nmap <silent> <leader>b :bw<cr>
 
 " shortcut to save
-nmap <leader>, :w<cr>
+nmap <leader>w :w<cr>
 
 " set paste toggle
 set pastetoggle=<leader>v
